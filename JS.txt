@@ -1,0 +1,49 @@
+
+
+const enterBut = document.querySelector(".enterBut");
+const textContainer = document.querySelector(".text-container");
+let notes=document.querySelectorAll(".text-container");
+
+function getData() {
+    textContainer.innerHTML=localStorage.getItem("data");
+}
+
+function setData() {
+    localStorage.setItem("data",textContainer.innerHTML);
+}
+// localStorage.clear();
+getData();
+
+enterBut.addEventListener("click", () => {
+    let p = document.createElement("p");
+    let img = document.createElement("img");
+    img.src = "images/delete.png";
+    p.className = "text-box";
+    p.setAttribute("contenteditable", "true");
+    textContainer.appendChild(p).appendChild(img);
+});
+
+textContainer.addEventListener("click",function(e){
+    if(e.target.tagName==="IMG"){
+        e.target.parentElement.remove();
+        setData();
+    }else if (e.target.tagName==="P") {
+        notes=document.querySelectorAll(".text-container");
+        notes.forEach(nts=>{
+            nts.onkeyup=function(){
+                setData();
+            }
+        })
+    }
+});
+
+document.addEventListener("keydown",event=>{
+    if(event.key==="Enter"){
+        document.execCommand("insertLineBreak");
+    event.preventDefault();
+    }
+    
+});
+
+
+

@@ -1,0 +1,47 @@
+.container{
+    margin: 20px auto;
+    background:darkslateblue;
+    min-height: max-content;
+    width: 600px;
+    padding: 40px 20px;
+}
+.head{
+    font-style:oblique;
+    color: aliceblue;
+    font-size: 50px;
+}
+.head img{
+    padding-top: 10px;
+    height: 50px;
+    width: 50px;
+}
+.enterBut{
+    height: 50px;
+    width: 130px;
+    border: none;
+    border-radius: 25px;
+    font-family:cursive;
+    font-size: 24px;
+    font-weight:bolder;
+    background: linear-gradient(rgba(122, 121, 113, 0.63),rgb(153, 129, 167));
+    cursor: pointer;
+}
+.text-box{
+    margin: 30px 20px;
+    background-color: #ffff;
+    height: 200px;
+    width: 500px;
+    position: relative;
+    border-radius: 3px;
+    padding: 10px 10px;
+}
+.text-box img{
+    position: absolute;
+    object-fit: fill;
+    width: 20px;
+    bottom: 0;
+    right: 0;
+    padding-right: 14px;
+    padding-bottom: 14px;
+    cursor: pointer;
+}

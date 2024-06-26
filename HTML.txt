@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notepad</title>
+    <link rel="stylesheet" href="notePad.css">
+</head>
+<div class="container">
+    <h1 class="head">Notepad <img src="/js-projects/Notepad/images/notebook.png" alt=""></h1>  
+    <button class="enterBut" onclick="textBook()">Create</button>
+    <div class="text-container">
+        <!-- <p contenteditable="true" class="text-box">
+            <img src="/js-projects/Notepad/images/delete.png" class="delete" alt="">
+        </p> -->
+    </div>
+</div> 
+<script src="notePad.js"></script>
+<body>
+    
+</body>
+</html>
